@@ -75,6 +75,7 @@ int main(){
     printf("A quantidade de pontos turísticos: \n");
     scanf("%d", &pontos2);
 
+    /*========== Cálculo para descobrir o Per Capita e a Densidade Populacional ==========*/
     perCapita2 = pib2 / populacao2;
     densidade2 = populacao2 / area2;
 
@@ -102,5 +103,16 @@ int main(){
     printf("Densidade populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", perCapita2);
 
+    /*========== Compara e informa a carta com maior população ==========*/
+    printf("Carta 1 - %s: %d\n", cidade1, populacao1);
+    printf("Carta 2 - %s: %d\n", cidade2, populacao2);
+
+    if (populacao1 > populacao2)
+    {
+        printf("Resultado: Carta 1 (%s) venceu.", cidade1);
+    } else {
+        printf("Resultado: Carta 2 (%s) venceu.", cidade2);
+    }
+    
     return 0;
 }
